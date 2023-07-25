@@ -1,0 +1,279 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+  }
+
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  font-family: 'Poppins',Arial, sans-serif;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+article > * + * {
+  margin-top: 1em;
+}
+
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+.nav, .project-conteiner, .skills-conteiner, .about-conteiner{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* MY */
+.main{
+    color: red;
+}
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* nav */
+
+
+.nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 20px 0;
+}
+
+/* logo */
+
+.logo img{
+    width: 60px;
+    height: 60px;
+}
+
+/* nav-link */
+
+.nav-link{
+    width: 100%;
+}
+.nav-link ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+}
+.nav-link ul li img{
+    width: 60px;
+    height: 60px;
+}
+
+.nav-link ul li a{
+    position: relative;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+
+.nav-link ul li a::after {
+    content: ''; 
+    position: absolute; 
+    left: 0; 
+    bottom: -2px; 
+    width: 100%; 
+    height: 2px; 
+    background-color: #ffbd39; 
+    /* opacity: 0;  */
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: 0.2s ease;
+}
+
+/* Стиль для линии под текстом ссылки при наведении курсора */
+.nav-link ul li a:hover::after {
+    /* opacity: 1; */
+    transform: scaleX(1); /* При наведении делаем линию видимой */
+}
+
+
+
+/* hero img */
+.hero-img{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+.hero-img video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    object-fit: cover;
+    height: 100vh;
+}
+
+.hero-text{
+   max-width: 1200px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   height: 60vh;
+}
+.hero-text span{
+    color: white;
+    font-size: 48px;
+    font-weight: 600;
+}
+.hero-text h2{
+    font-size: 48px;
+    color: #ffbd39; 
+    display: inline;
+
+}
+
+/* Project */
+
+.project{
+    height: 100%;
+    padding: 10px 0;
+    background-color: rgb(23, 23, 23);
+}
+.project h2{
+    font-size: 48px;
+    color: #ffff;
+}
+
+.project-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin: 10px 0;
+}
+.project-block{
+    position: relative;
+    border-radius: 10px;
+    /* overflow: hidden; */
+}
+
+.project-block:hover .project-block-title{
+    /* transform: translateY(-100%); */
+}
+
+.project-block img{
+    object-fit: cover;
+}
+
+/* описание блоков проекта */
+
+.project-block-title{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: gray;
+    /* background-color: rgba(255, 189, 57, 0.9); */
+    z-index: 1;
+    overflow: hidden;
+    /* transform: translateY(100%); */
+    transition: transform 0.3s;
+}
+
+.block-title{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.block-title p{
+    font-size: 20px;
+    color: white;
+}
+.project-block-btn{
+    display: flex;
+    justify-content: center;
+}
+
+.project-block-btn span{
+    padding: 5px 10px;
+    border: 1px solid #fff;
+}
+
+/* skills */
+.skills{
+    background-color: rgb(55, 55, 55);
+    width: 100%;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+/* about */
+
+.about{
+    background-color: rgb(12, 12, 12);
+    width: 100%;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+}

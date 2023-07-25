@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="nav">
+                <div class="logo">
+                    <img src="./img/logo.png" alt="">
+                </div>
+                <div class="nav-link">
+                    <ul>
+                        <li><a href="#project">Project</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">icons</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="hero-text">
+                <span>Welcome</span>
+                <div>
+                    <h2 class="animated-text"></h2>
+                </div>
+            </div>
+            <div class="hero-img">
+                <video id="hero-video" controls="false" autoplay loop muted>
+                    <source src="./img/pexels-mikhail-nilov-6963744 (1080p).mp4" type="video/mp4">
+                </video>
+            </div>
+            
+        </div>
+        <div class="project" id="project">
+            <div class="project-conteiner">
+                <h2>Projects</h2>
+                <div class="project-items col-md-7">
+                    <div class="project-block">
+                        <img src="./img/babyFood.jpg" alt="img">
+                        <div class="project-block-title">
+                            <div class="block-title">
+                                <p>Babyfood.kg</p>
+                                <span>website</span>
+                            </div>
+                            <div class="project-block-btn">
+                                <span>Button</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-block">
+                        <img src="./img/babyFood.jpg" alt="img">
+                        <div class="project-block-title">
+                            <span>React js, css, axios, react-router-dom</span>
+                            <div >
+                                <p>website</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-block">
+                        <img src="./img/babyFood.jpg" alt="img">
+                        <div class="project-block-title">
+                            <span>React js, css, axios, react-router-dom</span>
+                            <div>3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="skills" id="skills">
+            <div class="skills-container">
+
+            </div>
+        </div>
+        <div class="about" id="about">
+            <div class="about-conteiner">
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/index.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script>
+        var typed = new Typed('.animated-text', {
+            strings: ["to my personal portfolio", "My name is Kanybek", "I'm web developer", "I'm superman"],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loop: true,
+        });
+    </script>
+</body>
+
+</html>
