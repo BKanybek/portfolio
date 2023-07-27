@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Portfolio</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -25,7 +26,7 @@
                         <li><a href="#project">Project</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#skills">icons</a></li>
+                        <li><a href="https://github.com/BKanybek" target="_blank"><i class="fa fa-github" style="font-size:24px"></i></a></li>
 
                     </ul>
                 </div>
@@ -41,12 +42,48 @@
                     <source src="./img/pexels-mikhail-nilov-6963744 (1080p).mp4" type="video/mp4">
                 </video>
             </div>
-            
+
+        </div>
+        <div class="about" id="about">
+            <div class="about-conteiner">
+                <h2>About me</h2>   
+                <div class="about-content">
+                    <div class="about-content-wrapper">
+                        <div class="about-img">
+                            <img src="./img/logo.png" alt="icon">
+                        </div>
+                        <div class="about-list-wrapper">
+                            <ul class="about-list">
+                                <li class="list">
+                                    <span>Name:</span>
+                                    <span>Kanybek</span>
+                                </li>
+                                <li class="list">
+                                    <span>Date of birth:</span>
+                                    <span>September 16, 1992</span>
+                                </li>
+                                <li class="list">
+                                    <span>Address:</span>
+                                    <span>Bishkek Kyrgyz Republic</span>
+                                </li>
+                                <li class="list">
+                                    <span>Email:</span>
+                                    <span>kkbolotkanov@gmail.com</span>
+                                </li>
+                                <li class="list">
+                                    <span>Phone:</span>
+                                    <span>+(996)507-02-21-99</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="project" id="project">
             <div class="project-conteiner">
                 <h2>Projects</h2>
-                <div class="project-items col-md-7">
+                <div class="project-items">
                     <div class="project-block">
                         <img src="./img/babyFood.jpg" alt="img">
                         <div class="project-block-title">
@@ -55,37 +92,52 @@
                                 <span>website</span>
                             </div>
                             <div class="project-block-btn">
-                                <span>Button</span>
+                                <a href=""><i class="fa fa-github"></i>Github</a>
+                                <a href="https://www.babyfood.kg/" target="_blank" >Source</a>
                             </div>
                         </div>
                     </div>
                     <div class="project-block">
-                        <img src="./img/babyFood.jpg" alt="img">
+                        <img src="./img/crud.jpg" alt="img">
                         <div class="project-block-title">
-                            <span>React js, css, axios, react-router-dom</span>
-                            <div >
-                                <p>website</p>
+                            <div class="block-title">
+                                <p>CRUD</p>
+                                <span></span>
+                            </div>
+                            <div class="project-block-btn">
+                                <a href="https://github.com/BKanybek/CRUD" target="_blank"><i class="fa fa-github"></i>Github</a>
+                                <a href="" target="_blank" >Source</a>
                             </div>
                         </div>
                     </div>
-                    <div class="project-block">
-                        <img src="./img/babyFood.jpg" alt="img">
-                        <div class="project-block-title">
-                            <span>React js, css, axios, react-router-dom</span>
-                            <div>3</div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
         <div class="skills" id="skills">
             <div class="skills-container">
-
-            </div>
-        </div>
-        <div class="about" id="about">
-            <div class="about-conteiner">
-
+                <h2>Skills</h2>
+                <div class="skills-list">
+                    <div class="skill">
+                        <div class="skill-name">
+                            <i class="fa fa-react"></i>
+                            <span>REACT</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-name">
+                            <i class="fa fa-html5"></i>
+                            <span>HTML</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <!-- Добавьте остальные навыки аналогично -->
+                </div>
             </div>
         </div>
     </div>
