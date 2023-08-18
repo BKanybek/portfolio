@@ -70,9 +70,8 @@ select {
 }
 
 
-.nav, .project-conteiner, .skills-conteiner, .about-conteiner{
-    max-width: 1200px;
-    margin: 0 auto;
+.nav, .project-conteiner, .hero-text, .skills-container, .about-conteiner, .contact-container{
+    margin: 0 100px;
 }
 /* MY */
 .main{
@@ -89,11 +88,9 @@ select {
 
 
 .nav{
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 100%;
     padding: 20px 0;
 }
 
@@ -151,6 +148,11 @@ select {
     transform: scaleX(1); /* При наведении делаем линию видимой */
 }
 
+.burger{
+    color: #ffff;
+    display: none;
+}
+
 
 
 /* hero img */
@@ -171,9 +173,7 @@ select {
     height: 100vh;
 }
 
-.hero-text{
-   max-width: 1200px;
-   margin: 0 auto;
+.hero-text{  
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -201,6 +201,7 @@ select {
 .project h2{
     font-size: 48px;
     color: #ffff;
+    margin: 0 0 30px 0;
 }
 
 .project-items{
@@ -349,23 +350,411 @@ select {
 /* skills */
 
 .skills{
-    background-color: rgb(55, 55, 55);
+    background-color: rgb(12, 12, 12);
     width: 100%;
-    height: 100vh;
-    color: white;
-    display: flex;
-    justify-content: center;
+}
+
+.skills h2{
+    font-size: 48px;
+    color: #fff;
+    margin: 0 0 30px 0;
+}
+
+.skills-conteiner{
+    width: 100%;
+}
+
+.skills-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.skill{
+    padding: 10px;
+}
+
+
+.skill-name i {
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
 }
 
 
 
+/* Добавьте дополнительные стили иконок по необходимости */
+.skill-name i.fa-html5 {
+    color: #E34F26; /* Цвет HTML */
+}
 
+.skill-name i.fa-css3 {
+    color: #2965F1; /* Цвет CSS */
+}
+
+.skill-name i.fa-js {
+    color: #F7DF1E; /* Цвет JS */
+}
+
+.skill-name i.fa-sass,
+.skill-name i.fa-scss {
+    color: #CC6699; /* Цвет SCSS/SASS */
+}
+
+.skill-name i.fa-bootstrap {
+    color: #7952B3; /* Цвет Bootstrap */
+}
+
+.skill-name i.fa-react {
+    color: #61DBFB; /* Цвет React */
+}
+
+.skill-name i.fa-react {
+    color: #61DBFB; /* Цвет Material-UI (MUI) */
+}
+
+.skill-name{
+    display: flex;
+    align-items: center;
+}
+
+.skill-name span{
+    margin: 0 0 0 15px;
+    font-size: 24px;
+    color: #fff;
+}
+
+.skill-name img {
+    width: 30px;
+    height: 30px;
+}
+
+.skill-name svg {
+    width: 30px;
+    height: 30px;
+}
+
+.skill-name svg path{
+    fill: #ff0000;
+}
+
+/* Contact */
+
+.contact{
+    background-color: rgb(12, 12, 12);
+    padding: 7em 0;
+}
+
+.contact-container h2{
+    color: #fff;
+    font-size: 48px;
+    margin: 0 0 30px 0;
+}
+
+.contact-container{
+    margin-bottom: 7em;
+}
+
+.contact-content{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contact-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-icons{
+    width: 60px; /* Добавим одинаковую ширину и высоту, чтобы иконка стала кругом */
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Центрируем иконку внутри круга */
+    margin-bottom: 10px;
+}
+
+.contact-icons i{
+    color: #ffbd39;
+    font-size: 20px;
+}
+
+.contact-item p {
+    color: #fff;
+}
+.contact-item p:nth-child(2){
+    text-transform: uppercase;
+    font-size: 22px;
+    margin: 10px 0 10px 0;
+}
+
+/*  */
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 7em;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    gap: 20px;
+    width: 500px;
+}
+
+.form-container form input{
+    padding: 10px;
+}
+
+.form-container form input,
+.form-container form textarea {
+    border: none;
+    outline: none;
+    border-radius: 10px;
+
+}
+.form-container form textarea {
+    height: 170px;
+    resize: none;
+}
+
+
+
+.form-container button {
+    width: 200px;
+    padding: 10px 0;
+    margin-top: 20px;
+    background-color: #ffbd39;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.form-container button:hover {
+    background-color: #fbc55a;
+}
+.form-container form input,
+.form-container form textarea {
+    width: 100%;
+    padding: 10px;
+}
+
+@media(max-width: 1024px) {
+    .nav, .project-conteiner, .skills-container, .about-conteiner{
+        margin: 0 50px;
+    }
+
+    .hero-text{
+        margin: 0 50px;
+    }
+
+    .skills-list{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+ 
 
 @media(max-width: 778px){
+    h2{
+        text-align: center;
+    }
     .project-items{
         display: grid;
         grid-template-columns: 1fr;
         gap: 15px;
         margin: 10px 0;
+    }
+
+    .about{
+        padding: 2em 0 0 0;
+    }
+
+    .project{
+        padding: 4em 0;
+    }
+
+    .contact{
+        padding: 4em 0;
+    }
+    .contact-container{
+        margin-bottom: 4em;
+    }
+
+    .contact-content{
+        flex-wrap: wrap;
+    }
+    
+    .contact-item:first-child{
+        margin-top: 0;
+    }
+    .contact-item{
+        margin-top: 60px;
+    }
+
+    /* skills */
+
+    .skills-list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+@media(max-width: 640px) {
+
+    .about-conteiner h2, .project h2, .skills h2, .contact-container h2{
+        font-size: 38px;
+    }
+
+    .about-content-wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-img{
+        margin-bottom: 40px;
+    }
+
+    .about-img img{
+        width: 150px;
+    }
+
+    .form-container form{
+        width: 360px;
+    }
+
+    .skills-list{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contact-item{
+        margin-top: 20px;
+    }
+    .hero{
+        position: relative;
+    }
+    .nav{
+        justify-content: space-between;
+    }
+
+    .nav-link {
+    /* display: none; */
+    position: fixed;
+    top: 0;
+    left: -100%; /* Начальное значение, чтобы меню было скрыто */
+    width: 250px; /* Ширина меню */
+    height: 100vh; /* Высота меню (подстройте под ваш дизайн) */
+    background-color: #ffff;
+    border-right: #ffff;
+    transition: left 0.3s ease-in-out; /* Плавный переход для left свойства */
+    z-index: 10;
+} 
+ .nav-link.active{
+    display: flex;
+    left: 0;
+}
+
+    .nav-link ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: start;
+        padding: 0;
+        margin: 40px 0;
+    }
+
+    .nav-link ul li{
+        margin: 5px 0;
+    }
+
+    .nav-link ul li a {
+        color: #000;
+    }
+
+    .burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+    }
+    
+    .bar {
+        width: 100%;
+        height: 4px;
+        background-color: #fff;
+        transition: transform 0.3s, opacity 0.3s;
+    }
+    
+    .burger.active .bar1 {
+        transform: rotate(-45deg) translate(-5px, 5px);
+    }
+    
+    .burger.active .bar2 {
+        opacity: 0;
+    }
+    
+    .burger.active .bar3 {
+        transform: rotate(45deg) translate(-5px, -5px);
+    }
+    
+
+  
+}
+
+@media(max-width: 475px) {
+    .nav, .project-conteiner, .skills-container, .about-conteiner, .contact-container{
+        margin: 0 20px;
+    }
+
+    .hero-text{
+        margin: 0 20px;
+    }
+
+    .form-container{
+        margin: 40px 0 0 0;
+    }
+
+    .form-container form{
+        width: 290px;
+    }
+
+    .about-list-wrapper{
+        padding: 0 0 0 0;
+    }
+
+    .hero-text span{
+        font-size: 38px;
+    }
+
+    .hero-text h2{
+        font-size: 38px;
+    }
+
+    .logo img{
+        width: 50px;
+        height: 50px;
+    }
+    .about-list .list span:first-child{
+        width: 100px;
+        font-size: 14px;
+    }
+
+    .about-list .list span{
+        font-size: 14px;
     }
 }
